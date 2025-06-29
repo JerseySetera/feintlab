@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEINT LAB - Creative Graphics Design Studio</title>
+    <link rel="icon" type="image/png" href="images/LOGO.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-logo-group">
+                <a href="#hero" class="logo">FEINT LAB</a>
+                <img src="images/LOGO.png" alt="FEINT LAB Brand Icon" class="header-logo-image" />
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+            <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about-us">ABOUT</a></li>
+                    <li><a href="#featured-works">WORKS</a></li>
+                    <li><a href="#contact-us">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="hero">
+            <div id="interactive-background"></div>
+            
+            <h1>FEINT LAB</h1>
+            <p class="tagline">Where design meets art in the poetry of motion. <br> It's the art of the move. <br><br></p>
+            <div class="hero-buttons">
+                <a href="#featured-works" class="button">View Our Work</a>
+                <a href="#contact-us" class="button secondary">Get In Touch</a>
+            </div>
+        </section>
+
+        <section id="about-us" class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image-column animated">
+                        <img src="images/me.jpg" alt="A photo of Jersey Zenith V. Setera, the designer behind FEINT LAB." class="about-photo">
+                    </div>
+
+                    <div class="about-content-column">
+                        <h2 class="animated" style="transition-delay: 0.1s;">ABOUT FEINT LAB</h2>
+                        <p class="about-intro animated" style="transition-delay: 0.2s;">
+                            With <strong>six years of dedicated experience</strong> in graphic design, I founded FEINT LAB as my creative studio to blend creativity with precision and turn ideas into realities.
+                        </p>
+                        <p class="animated" style="transition-delay: 0.3s;">
+                            Where Vision Meets Motion. We craft unique visual experiences at the intersection of design and art—the art of the move. From bold web design and immersive music production to striking custom apparel and modern posters, every project is built to captivate.
+                        </p>
+                        <h3 class="specialties-title animated" style="transition-delay: 0.4s;">Key Specialties</h3>
+                        <ul class="specialties-list animated" style="transition-delay: 0.5s;">
+                            <li>Web Design & Logos</li>
+                            <li>Beat Production & T-Shirt Graphics</li>
+                            <li>Modern Posters & Album Covers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-works" class="section">
+            <div class="container featured-works-content-area">
+                <h2 class="animated" style="transition-delay: 0.1s;">Featured Works</h2>
+                <div class="carousel-display animated" style="transition-delay: 0.2s;">
+                    <div class="image-wrapper">
+                        <a href="https://www.instagram.com/p/DLVHXEaz6j_/" target="_blank" rel="noopener noreferrer" id="current-instagram-link">
+                            <img src="images/1.png" alt="T-Shirt Designs" id="current-featured-image" />
+                            <div class="image-gradient-overlay">
+                                <p id="current-image-info">Custom apparel designs that resonate with your brand's unique identity.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-nav-thumbnails animated" style="transition-delay: 0.3s;">
+                    <div class="thumbnail-track">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us" class="section">
+            <div class="container">
+                <h2 class="animated">Get in Touch</h2>
+                <p class="animated contact-tagline" style="max-width: 700px; margin: 0 auto 3rem; color: var(--secondary-gray); font-size: 1.15rem;">
+                    Have a project in mind, a question about my work, or just want to say hello? Fill out the form below, and I'll get back to you as soon as possible!
+                </p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group animated" style="transition-delay: 0.1s;">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group animated" style="transition-delay: 0.2s;">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required />
+                    </div>
+                    <div class="form-group animated" style="transition-delay: 0.3s;">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or inquiry..." required></textarea>
+                    </div>
+                    <div class="form-group animated" style="transition-delay: 0.4s;">
+                        <button type="submit" id="submit-button" class="button">Send Message</button>
+                    </div>
+                    <div id="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="checkout-text">Checkout my other stuff</p>
+            <div class="footer-links">
+                <a href="https://jerseysetera.github.io/PORTFOLIO/" target="_blank" rel="noopener noreferrer" aria-label="Personal Portfolio">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4.5-8.5L9 13l-1.5 1.5L6 13l1.5-1.5L6 10l1.5-1.5L9 10l-1.5 1.5zm9 0L15 13l-1.5 1.5L12 13l1.5-1.5L12 10l1.5-1.5L15 10l1.5 1.5z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/feint.lab/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                        <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.2,5.2 0,0 1,16.2 22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.2,5.2 0,0 1,7.8 2M7.6,4A3.6,3.6 0,0 0,4 7.6V16.4A3.6,3.6 0,0 0,7.6 20H16.4A3.6,3.6 0,0 0,20 16.4V7.6A3.6,3.6 0,0 0,16.4 4H7.6M17.2,6A1.2,1.2 0,0 1,18.4 7.2A1.2,1.2 0,0 1,17.2 8.4A1.2,1.2 0,0 1,16 7.2A1.2,1.2 0,0 1,17.2 6M12,7A5,5 0,0 1,17 12A5,5 0,0 1,12 17A5,5 0,0 1,7 12A5,5 0,0 1,12 7M12,9A3,3 0,0 0,9 12A3,3 0,0 0,12 15A3,3 0,0 0,15 12A3,3 0,0 0,12 9Z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/jersey-setera-7955ab36b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                        <path d="M19,3A2,2 0,0 1,21 5V19A2,2 0,0 1,19 21H5A2,2 0,0 1,3 19V5A2,2 0,0 1,5 3H19M18.5,18.5V13.2A3.26,3.26 0,0 0,15.24 9.94C14.39,9.94 13.4,10.43 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17C15.08,12.17 15.71,12.8 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0,0 0,8.56 6.88C8.56,6 7.78,5.2 6.88,5.2A1.69,1.69 0,0 0,5.2 6.88C5.2,7.78 6,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="copyright-text">&copy; 2025 FEINT LAB. All rights reserved. Designed by Jersey Zenith V. Setera.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
