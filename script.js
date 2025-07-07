@@ -133,130 +133,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const featuredWorksData = [
-        { id: 'tshirt-designs', title: 'Random Poster Collections IV', description: 'Mysterious lights, erratic movements, blurred footage, UFOs defy easy explanation.', image: 'images/1.png', instagramLink: 'https://www.instagram.com/p/DJt___kTWWG/' },
-        { id: 'poster-series', title: 'Motus in Distorsione', description: 'Inspired from Renaissance angelic iconography, beings of divine origin descending into human chaos not merely as messengers, but as movers. ', image: 'images/2.png', instagramLink: 'https://www.instagram.com/p/DIOyIgbzzam/' },
-        { id: 'logo-collection', title: 'Random Poster Collections II', description: 'An inspiration drawn from one of the greatest artists to ever exist, @xxxtentacion It represents the one who ignited my passion for music, the artist who inspired millions.', image: 'images/13.png', instagramLink: 'https://www.instagram.com/p/DIeMO1UT8mT/' },
-        { id: 'social-media-graphics', title: 'Series: Random Poster Collections III', description: 'Lately obsessed with bending reality—turning distortions into art that warps perception and sparks emotion.', image: 'images/3.png', instagramLink: 'https://www.instagram.com/p/DItZ8Q7Tl-w/' },
-        { id: 'packaging-design', title: 'Series: Random Poster Collections I', description: 'THE MAJESTIC CHINESE DRAGON (龍 - LÓNG) Exploring the rich symbolism of the Chinese Dragon.', image: 'images/4.png', instagramLink: 'https://www.instagram.com/p/DIblSHET_Py/' },
-        { id: 'editorial-layouts', title: 'The Divine Triad', description: 'More than just gods, they are powerful archetypes within the human psyche.', image: 'images/5.png', instagramLink: 'https://www.instagram.com/p/DLFwD0eTkEv/?img_index=1' },
-        { id: 'web-design-mockups', title: 'Random Poster Collections V', description: 'To sever ties with finality, leaving no route for retreat.', image: 'images/6.png', instagramLink: 'https://www.instagram.com/p/DJuAT1Ez6er/' },
-        { id: 'book-cover-illustrations', title: 'Kendrick Lamar', description: 'A tribute to the Pulitzer Prize-winning poet of our generation — Kendrick Lamar Duckworth.', image: 'images/7.jpg', instagramLink: 'https://www.instagram.com/p/DLVHXEaz6j_/' },
-        { id: 'infographics-design', title: 'vita ex morte', description: 'Death isn’t the end, but a transformation.', image: 'images/8.png', instagramLink: 'https://www.instagram.com/p/DIRU2JAz8xP/?img_index=2' },
-        { id: 'brand-guidelines', title: 'Art of the Move', description: 'Inspired by Michelangelo’s Creation of Adam, this piece reimagines the divine touch as a spark of creativity and struggle', image: 'images/9.png', instagramLink: 'https://www.instagram.com/p/DIMLtDbTmzK/' },
-        { id: 'digital-illustrations', title: 'Shirt TDT', description: 'A visualization of the desgin named The Divine Triad turned into a shirt.', image: 'images/10.png', instagramLink: 'https://www.instagram.com/p/DLGDnywzKgB/?img_index=1' },
-        { id: 'event-branding', title: 'Logo ZXN', description: 'Logo created for ZXN Nails on Instagram', image: 'images/11.png', instagramLink: 'https://www.instagram.com/zxn.nails/' },
-        { id: 'ui-ux-concepts', title: 'ShirtMID', description: 'A visualization of the desgin named Motus in Distorsione turned into a shirt.', image: 'images/12.png', instagramLink: 'https://www.instagram.com/p/DLGDnywzKgB/?img_index=3' }
+        { title: 'Random Poster Collections IV', description: 'Mysterious lights, erratic movements, blurred footage, UFOs defy easy explanation.', image: 'images/1.png', instagramLink: 'https://www.instagram.com/p/DJt___kTWWG/' },
+        { title: 'Motus in Distorsione', description: 'Inspired from Renaissance angelic iconography, beings of divine origin descending into human chaos.', image: 'images/2.png', instagramLink: 'https://www.instagram.com/p/DIOyIgbzzam/' },
+        { title: 'Random Poster Collections II', description: 'An inspiration drawn from one of the greatest artists to ever exist, @xxxtentacion.', image: 'images/13.png', instagramLink: 'https://www.instagram.com/p/DIeMO1UT8mT/' },
+        { title: 'Series: Random Poster Collections III', description: 'Lately obsessed with bending reality—turning distortions into art that warps perception.', image: 'images/3.png', instagramLink: 'https://www.instagram.com/p/DItZ8Q7Tl-w/' },
+        { title: 'Series: Random Poster Collections I', description: 'THE MAJESTIC CHINESE DRAGON (龍 - LÓNG) Exploring the rich symbolism of the Chinese Dragon.', image: 'images/4.png', instagramLink: 'https://www.instagram.com/p/DIblSHET_Py/' },
+        { title: 'The Divine Triad', description: 'More than just gods, they are powerful archetypes within the human psyche.', image: 'images/5.png', instagramLink: 'https://www.instagram.com/p/DLFwD0eTkEv/?img_index=1' },
+        { title: 'Random Poster Collections V', description: 'To sever ties with finality, leaving no route for retreat.', image: 'images/6.png', instagramLink: 'https://www.instagram.com/p/DJuAT1Ez6er/' },
+        { title: 'Kendrick Lamar', description: 'A tribute to the Pulitzer Prize-winning poet of our generation — Kendrick Lamar Duckworth.', image: 'images/7.jpg', instagramLink: 'https://www.instagram.com/p/DLVHXEaz6j_/' },
+        { title: 'vita ex morte', description: 'Death isn’t the end, but a transformation.', image: 'images/8.png', instagramLink: 'https://www.instagram.com/p/DIRU2JAz8xP/?img_index=2' },
+        { title: 'Art of the Move', description: 'Inspired by Michelangelo’s Creation of Adam, this piece reimagines the divine touch as a spark of creativity.', image: 'images/9.png', instagramLink: 'https://www.instagram.com/p/DIMLtDbTmzK/' },
+        { title: 'Shirt TDT', description: 'A visualization of the design named The Divine Triad turned into a shirt.', image: 'images/10.png', instagramLink: 'https://www.instagram.com/p/DLGDnywzKgB/?img_index=1' },
+        { title: 'Logo ZXN', description: 'Logo created for ZXN Nails on Instagram', image: 'images/11.png', instagramLink: 'https://www.instagram.com/zxn.nails/' },
+        { title: 'ShirtMID', description: 'A visualization of the design named Motus in Distorsione turned into a shirt.', image: 'images/12.png', instagramLink: 'https://www.instagram.com/p/DLGDnywzKgB/?img_index=3' }
     ];
-
-    const thumbnailTrack = document.querySelector('.thumbnail-track');
-    const carouselNavThumbnailsContainer = document.querySelector('.carousel-nav-thumbnails');
-    const currentFeaturedImage = document.getElementById('current-featured-image');
-    const currentImageInfo = document.getElementById('current-image-info');
-    const currentInstagramLink = document.getElementById('current-instagram-link');
-
-    let autoScrollInterval;
-    let interactionTimeout;
-
-    function startAutoScroll() {
-        clearInterval(autoScrollInterval); 
-        autoScrollInterval = setInterval(() => {
-            if(carouselNavThumbnailsContainer) carouselNavThumbnailsContainer.scrollLeft += 1;
-        }, 25); 
-    }
-
-    function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
-    }
     
-    function handleInteraction() {
-        stopAutoScroll();
-        clearTimeout(interactionTimeout);
-        interactionTimeout = setTimeout(startAutoScroll, 300);
-    }
+    function populateCollageGrid() {
+        const collageGrid = document.querySelector('.collage-grid');
+        if (!collageGrid) return;
 
-    function updateFeaturedContent(index) {
-        if (index < 0 || index >= featuredWorksData.length) return;
-        const data = featuredWorksData[index];
-        if (currentFeaturedImage) {
-            currentFeaturedImage.style.opacity = '0';
-        }
-        if(currentImageInfo) {
-            currentImageInfo.parentElement.style.opacity = '0';
-        }
-        
-        setTimeout(() => {
-            if(currentFeaturedImage) {
-                currentFeaturedImage.src = data.image;
-                currentFeaturedImage.alt = data.title;
-                currentFeaturedImage.style.opacity = '1';
-            }
-            if(currentImageInfo) {
-                currentImageInfo.textContent = data.description;
-                currentImageInfo.parentElement.style.opacity = '1';
-            }
-            if(currentInstagramLink) {
-                currentInstagramLink.href = data.instagramLink;
-            }
-        }, 400);
-    }
+        const sizePattern = ['', 'collage-item--wide', '', 'collage-item--tall', 'collage-item--large', ''];
 
-    function setActiveThumbnail(selectedIndex) {
-        document.querySelectorAll('.thumbnail-item').forEach(item => {
-            item.classList.toggle('active', parseInt(item.getAttribute('data-original-index')) === selectedIndex);
+        featuredWorksData.forEach((item, index) => {
+            const sizeClass = sizePattern[index % sizePattern.length];
+
+            const collageItem = document.createElement('div');
+            collageItem.className = `collage-item ${sizeClass}`;
+            
+            collageItem.style.transitionDelay = `${index * 200}ms`;
+
+            collageItem.innerHTML = `
+                <a href="${item.instagramLink}" target="_blank" rel="noopener noreferrer">
+                    <img src="${item.image}" alt="${item.title}" loading="lazy">
+                    <div class="collage-item-overlay">
+                        <h4>${item.title}</h4>
+                        <p>${item.description}</p>
+                    </div>
+                </a>
+            `;
+            collageGrid.appendChild(collageItem);
         });
     }
 
-    function populateThumbnails() {
-        if (!thumbnailTrack) return;
-        thumbnailTrack.innerHTML = '';
-        const numDuplicates = 2;
-        for (let j = 0; j < numDuplicates; j++) {
-            featuredWorksData.forEach((item, index) => {
-                const thumbnailDiv = document.createElement('div');
-                thumbnailDiv.className = 'thumbnail-item';
-                thumbnailDiv.setAttribute('data-original-index', index);
-                const thumbnailImg = document.createElement('img');
-                thumbnailImg.src = item.image;
-                thumbnailImg.alt = `${item.title} Thumbnail`;
-                thumbnailDiv.appendChild(thumbnailImg);
-                thumbnailTrack.appendChild(thumbnailDiv);
-
-                thumbnailDiv.addEventListener('click', function(e) {
-                    const clickedIndex = parseInt(this.getAttribute('data-original-index'));
-                    updateFeaturedContent(clickedIndex);
-                    setActiveThumbnail(clickedIndex);
-                });
-            });
-        }
-    }
-
-    populateThumbnails();
-    if(featuredWorksData.length > 0) {
-        updateFeaturedContent(0);
-        setActiveThumbnail(0);
-        startAutoScroll();
-    }
-    
-    if(carouselNavThumbnailsContainer){
-        carouselNavThumbnailsContainer.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            handleInteraction(); 
-            carouselNavThumbnailsContainer.scrollLeft += e.deltaY;
-        }, { passive: false });
-
-        carouselNavThumbnailsContainer.addEventListener('scroll', () => {
-            const scroller = carouselNavThumbnailsContainer;
-            if (scroller.scrollWidth > 0) {
-                const singleSetWidth = scroller.scrollWidth / 2;
-                if (scroller.scrollLeft >= singleSetWidth) {
-                    scroller.scrollLeft -= singleSetWidth;
-                }
-                 if (scroller.scrollLeft <= 0) { 
-                     scroller.scrollLeft += singleSetWidth;
-                 }
-            }
-        });
-    }
+    populateCollageGrid();
 
     let lastScrollTop = 0;
     const header = document.querySelector('.header');
