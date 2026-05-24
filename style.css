@@ -363,11 +363,27 @@ body {
 
 .collage-item {
     position: relative;
+    background-color: #f0f0f0; /* Muted loading color block */
     overflow: hidden;
-    border-radius: 0;
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    
+    /* OPTIMIZATION: Shift elements up gently using 3D acceleration for better frame rates */
+    transform: translate3d(0, 20px, 0);
+    transition: opacity 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000), 
+                transform 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    
+    /* Prevents layout shifts while loading images */
+    aspect-ratio: auto; 
+    will-change: transform, opacity;
+}
+
+/* Ensure the image inside spans fluidly without layout flickering */
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-speed);
 }
 
 .collage-grid.in-view .collage-item {
@@ -748,18 +764,24 @@ body {
     }
 
     .collage-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 280px;
-        gap: 0.25rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;                
+        gap: 0.5rem;                          
     }
+    
+    .collage-item,
     .collage-item--wide,
     .collage-item--tall,
     .collage-item--large {
-        grid-column: auto;
-        grid-row: auto;
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        width: 100%;
+        height: 100%;
+        display: block;
     }
+
     .collage-item:nth-child(3n) {
-        grid-column: span 2;
+        grid-column: span 2 !important;
     }
 }
 
