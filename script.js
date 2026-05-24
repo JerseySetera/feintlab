@@ -176,13 +176,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const sizePattern = ['', 'collage-item--wide', '', 'collage-item--tall', 'collage-item--large', ''];
 
         featuredWorksData.forEach((item, index) => {
-            const sizeClass = sizePattern[index % sizePattern.length];
+    const sizeClass = sizePattern[index % sizePattern.length];
 
-            const collageItem = document.createElement('div');
-            collageItem.className = `collage-item ${sizeClass}`;
-            
-            // Scaled back the staggered load layout delay down to 100ms so 29 items render smoothly without freezing
-            collageItem.style.transitionDelay = `${index * 100}ms`;
+    const collageItem = document.createElement('div');
+    collageItem.className = `collage-item ${sizeClass}`;
+    
+    // OPTIMIZATION: Use a soft visual wave pattern or standard stagger that caps 
+    // at a maximum delay so items lower on the screen don't take forever to appear.
+    const optimizedDelay = Math.min((index % 6) * 60, 300);
+    collageItem.style.transitionDelay = `${optimizedDelay}ms`;
 
             collageItem.innerHTML = `
                 <a href="${item.instagramLink}" target="_blank" rel="noopener noreferrer">
@@ -273,4 +275,16 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.textContent = 'Send Message';
         });
     });
+});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            // Unobserve after animating to save continuous browser memory
+            observer.unobserve(entry.target); 
+        }
+    });
+}, {
+    threshold: 0.05, // Starts animating earlier (when just 5% of the card is visible)
+    rootMargin: '0px 0px 50px 0px' // Pre-triggers 50px before entering viewport for a smoother look
 });
